@@ -1,0 +1,27 @@
+<br />
+<b>Warning</b>:  filesize(): stat failed for /var/www/assets/temp/584tamagoshi.jar.exe in <b>/var/www/app/helpers/outputFile.php</b> on line <b>7</b><br />
+<br />
+<b>Warning</b>:  readfile(/var/www/assets/temp/584tamagoshi.jar.exe): failed to open stream: No such file or directory in <b>/var/www/app/helpers/outputFile.php</b> on line <b>9</b><br />
+<br />
+<b>Warning</b>:  unlink(/var/www/assets/temp/584tamagoshi.jar.exe): No such file or directory in <b>/var/www/app/helpers/outputFile.php</b> on line <b>12</b><br />
+<div class="page-header">
+	<h1>Convertisseur de JAR en EXE</h1>
+</div>
+<p>Ce convertisseur vous permet de créer un fichier exécutable pour Windows à partir d'une archive JAR (avec une fonction <em>main</em> déclarée dans le manifest).</p>
+<p>Envoyez juste votre archive, sélectionnez la version minimale de Java nécessaire pour l'exécuter et éventuellement un icône pour le fichier final puis cliquez sur le gros bouton pour lancer la conversion !</p>
+<p><span class="label label-danger">Ca ne marche pas ?</span> Essayez de supprimer tous les espaces et caractères spéciaux dans le nom du fichier. launch4j ne les aime pas.</p>
+<form enctype="multipart/form-data" class="well" method="post">
+	<div class="form-group">
+		<label>Archive JAR à convertir</label>
+		<input name="jarfile" type="file" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Icône de l'exécutable <small>(au format ICO, facultatif)</small></label>
+		<input name="iconfile" type="file" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Version minimale de Java requise <small>(au format x.x.x[_xx] ; par exemple 1.8.0_65)</small></label>
+		<input name="minjre" type="text" class="form-control" placeholder="x.x.x[_xx]">
+	</div>
+	<button class="btn btn-primary btn-full" type="submit">Convertir mon archive !</button>
+</form>
